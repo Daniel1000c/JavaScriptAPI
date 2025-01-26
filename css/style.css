@@ -1,0 +1,89 @@
+/************General Formatting************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/************End of general formatting************/
+
+/************Animation Formatting************/
+@keyframes fadedown {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/************End of Animation Formatting************/
+
+/************Font face Formatting************/
+@font-face {
+    font-family: 'VarelaRound-Regular';
+    src: url(../fonts/VarelaRound-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Quicksand-VariableFont_wght';
+    src: url(../fonts/Quicksand-VariableFont_wght.ttf);
+}
+/************End of Font face Formatting************/
+
+/************Root Formatting************/
+:root {
+    --primary-round-font: 'VarelaRound-Regular';/*Font font family for h1 tags*/
+    --primary-font-size: 6.5em;/*Primary font size*/
+    --secondary-round-font: 'Quicksand-VariableFont_wght';/*Font family for h2 tags*/
+    --second-font-size: 4em;/*Second font size for h2 tags*/
+    --footer-font-family: monospace;;
+    --footer-font-size: 3em;/*Font size for footer*/
+}
+/************End of Root Formatting************/
+
+/************Header Formatting************/
+header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadedown 1s ease-in-out;
+}
+
+/*Format hamburger menu*/
+.bx-menu {
+    padding: 10px;
+    font-size: 7em;
+    border: 5px solid black;
+    border-radius: 8px;
+}
+
+/*Format site logo*/
+.siteLogo {
+    max-width: 250px;
+}
+/************End of Header Formatting************/
+
+/************Section Formatting************/
+section {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*Format section h2 tags*/
+section h2 {
+    font-family: var(--secondary-round-font);
+    font-size: var(--second-font-size);
+}
+/************End of Section Formatting************/
+
+/************Footer Formatting************/
+footer {
+    padding: 20px;
+    text-align: center;
+    font-size: var(--footer-font-size);
+    font-family: var(--footer-font-family);
+    font-weight: bolder;
+}
+/************End of Footer Formatting************/
