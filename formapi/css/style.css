@@ -1,0 +1,177 @@
+/************General Formatting************/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Format body waves*/
+body {
+    background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    background-attachment: fixed;
+}
+/************End of general formatting************/
+
+/************Keyframe Formatting************/
+@keyframes gradient-animation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+/************End of Keyframe Formatting************/
+
+/************Font Face Formatting************/
+@font-face {
+    font-family: 'VarelaRound-Regular';
+    src: url(../fonts/VarelaRound-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'MPLUSRounded1c-Regular', sans-serif;
+    src: url(../fonts/MPLUSRounded1c-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'MPLUSRounded1c-ExtraBold', sans-serif;
+    src: url(../fonts/MPLUSRounded1c-ExtraBold.ttf);
+}
+/************End of Font Face Formatting************/
+
+/************Root Formatting************/
+:root {
+    --primary-title: 'VarelaRound-Regular', sans-serif;/*Font family for h1 tag*/
+    --primary-font-size: 5em;/*Primary font size*/
+    --label-font-family: 'MPLUSRounded1c-Regular', sans-serif;/*Font family for labels*/
+    --submit-btn-font: 'MPLUSRounded1c-ExtraBold', sans-serif;/*Font family for submit button*/
+    --footer-title: monospace;/*Font family for footer*/
+    --footer-font-size: 2em;/*Footer font size*/
+}
+/************End of Root Formatting************/
+
+/************Header Formatting************/
+header {
+    padding: 20px;
+}
+
+header h1 {
+    font-family: var(--primary-title);
+    font-size: var(--primary-font-size);
+    color: white;
+
+}
+/************End of Header Formatting************/
+
+/************Form Formatting************/
+form {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+/*Format form title*/
+form h2 {
+    font-family: var(--primary-title);
+    font-size: 3em;
+    color: black;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/*Format form labels*/
+label {
+    font-family: var(--label-font-family);
+    font-size: 4em;
+}
+
+/*Format form inputs*/
+
+/*text inputs*/
+input[type="text"]{
+    margin-top: 15px;
+    width: 100%;
+    font-size: 3em;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+/*Email inputs*/
+input[type="email"]{
+    margin-top: 15px;
+    width: 100%;
+    font-size: 3em;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+/*Phone number inputs*/
+input[type="tel"]{
+    margin-top: 15px;
+    width: 100%;
+    font-size: 3em;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+/*Textarea inputs*/
+textarea {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 10em;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+/*File inputs*/
+input[type="file"] {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 3em;
+    border-radius: 8px;
+}
+
+/*Format button container*/
+.buttonContainer {
+    text-align: center;
+}
+
+/*Format submit button*/
+input[type="submit"] {
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    font-size: 4em;
+    font-family: var(--submit-btn-font);
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    background-color: #dd7973;
+    color: white;
+}
+/************End of Form Formatting************/
+/************Footer Formatting************/
+footer {
+    margin-top: 25px;
+    padding: 20px;
+    text-align: center;
+    font-size: var(--footer-font-size);
+    font-family: var(--footer-title);
+    color: white;
+}
+/************End of Footer Formatting************/
+
+
+
