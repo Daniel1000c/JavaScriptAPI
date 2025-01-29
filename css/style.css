@@ -84,6 +84,78 @@ section h2 {
     font-size: var(--second-font-size);
 }
 
+/**Hero section formatting**/
+
+/*Format hero section*/
+.heroSection {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*Format video background*/
+.videoBackground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/*Format video overlay*/
+.videoOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/*Format hero content*/
+.heroContent {
+    position: relative;
+    z-index: 1;
+}
+
+/*Format hero content h2*/
+.heroContent h2 {
+    font-family: var(--secondary-round-font);
+    font-size: var(--second-font-size);
+    color: white;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+/*Format hero content a*/
+.heroContent a {
+    font-family: var(--primary-round-font);
+    font-size: 2.5em;
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #BDFFFD;
+    padding: 50px;
+    border-radius: 10px;
+    color: black;
+    display: inline-block;
+    width: 60%;
+    margin-top: 20px;
+}
+
+
+
 /**Project section Formatting**/
 /*Format Project Grid*/
 .projectGrid {
