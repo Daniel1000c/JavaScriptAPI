@@ -71,7 +71,7 @@ header h1 {
 
 /************Form Formatting************/
 form {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     background-color: white;
     border-radius: 10px;
@@ -93,13 +93,44 @@ label {
     font-size: 4em;
 }
 
+/*Format radio container*/
+.radioContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/*Format radio labels*/
+.radioLabel {
+    font-family: var(--label-font-family);
+    font-size: 2em;
+    margin: 0 10px;
+    text-transform: capitalize;
+}
+
 /*Format form inputs*/
 
+
+/*Format select*/
+select {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 4em;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+/*Format option in select*/
+option {
+    font-size: 20px;
+}
 /*text inputs*/
 input[type="text"]{
     margin-top: 15px;
     width: 100%;
-    font-size: 3em;
+    font-size: 4em;
     border-radius: 8px;
     border: 2px solid black;
 }
@@ -108,7 +139,7 @@ input[type="text"]{
 input[type="email"]{
     margin-top: 15px;
     width: 100%;
-    font-size: 3em;
+    font-size: 4em;
     border-radius: 8px;
     border: 2px solid black;
 }
@@ -117,9 +148,17 @@ input[type="email"]{
 input[type="tel"]{
     margin-top: 15px;
     width: 100%;
-    font-size: 3em;
+    font-size: 4em;
     border-radius: 8px;
     border: 2px solid black;
+}
+
+/*Format radio input*/
+input[type="radio"] {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    transform: scale(2.3);/*Change scale of input buttons*/
 }
 
 /*Textarea inputs*/
