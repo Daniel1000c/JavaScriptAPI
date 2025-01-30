@@ -7,7 +7,7 @@
 
 /*Format body waves*/
 body {
-    background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+    background: linear-gradient(253deg,#fe7263,#3fddbe,#bf4788,#8a4d07);
     background-size: 180% 180%;
     animation: gradient-animation 18s ease infinite;
     background-attachment: fixed;
@@ -24,6 +24,17 @@ body {
     }
     100%{
         background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 /************End of Keyframe Formatting************/
@@ -73,9 +84,11 @@ header h1 {
 form {
     width: 90%;
     margin: 0 auto;
+    margin-top: 50px;
     background-color: white;
     border-radius: 10px;
     padding: 50px;
+    animation: fadeDown 1s ease-in-out;/*Create fade down animation*/
 }
 
 /*Format form title*/
