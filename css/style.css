@@ -32,6 +32,11 @@
     font-family: 'CreteRound-Regular';
     src: url(../fonts/CreteRound-Regular.ttf);
 }
+
+@font-face {
+    font-family: 'Barlow-Regular';
+    src: url(../fonts/Barlow-Regular.ttf);
+}
 /************End of Font face Formatting************/
 
 /************Root Formatting************/
@@ -39,11 +44,11 @@
     --primary-round-font: 'VarelaRound-Regular';/*Font font family for h1 tags*/
     --primary-font-size: 6.5em;/*Primary font size*/
     --secondary-round-font: 'Quicksand-VariableFont_wght';/*Font family for h2 tags*/
-    --second-font-size: 4em;/*Second font size for h2 tags*/
+    --second-font-size: 5em;/*Second font size for h2 tags*/
     --card-title-font-family: 'CreteRound-Regular';/*Font family for h3 tags in project item titles*/
     --card-font-size: 4em;/*Font size for h3 tags in project item titles*/
     --footer-font-family: monospace;;
-    --footer-font-size: 2em;/*Font size for footer*/
+    --footer-font-size: 1em;/*Font size for footer*/
 }
 /************End of Root Formatting************/
 
@@ -54,6 +59,7 @@ header {
     align-items: center;
     justify-content: space-between;
     animation: fadedown 1s ease-in-out;
+    background-color: rgba(211, 211, 211);
 }
 
 /*Format hamburger menu*/
@@ -82,6 +88,14 @@ section {
 section h2 {
     font-family: var(--secondary-round-font);
     font-size: var(--second-font-size);
+}
+
+/*Format section bg*/
+.sectionBg {
+    background-image: url(../images/monochrome3d.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /**Hero section formatting**/
@@ -154,7 +168,20 @@ section h2 {
     margin-top: 20px;
 }
 
+/**About section Formatting**/
 
+/*Format about section*/
+.aboutContainer {
+    margin-bottom: 50px;
+}
+/*Format about section text*/
+.aboutContainer p {
+    letter-spacing: 2px;
+    line-height: 2;
+    font-family: 'Barlow-Regular', sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
+}
 
 /**Project section Formatting**/
 /*Format Project Grid*/
@@ -219,5 +246,6 @@ footer {
     font-size: var(--footer-font-size);
     font-family: var(--footer-font-family);
     font-weight: bolder;
+    background-color: rgba(212, 212, 212, 0.8);
 }
 /************End of Footer Formatting************/
