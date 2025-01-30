@@ -70,13 +70,23 @@ body {
 /************Header Formatting************/
 header {
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header h1 {
     font-family: var(--primary-title);
     font-size: var(--primary-font-size);
     color: white;
+}
 
+/*Format hamburger menu*/
+.bx-menu {
+    padding: 10px;
+    font-size: 7em;
+    border: 5px solid black;
+    border-radius: 8px;
 }
 /************End of Header Formatting************/
 
