@@ -70,6 +70,7 @@ header {
     border-radius: 8px;
 }
 
+
 /*Format site logo*/
 .siteLogo {
     max-width: 250px;
@@ -86,6 +87,7 @@ section {
 
 /*Format section h2 tags*/
 section h2 {
+    padding: 20px;
     font-family: var(--secondary-round-font);
     font-size: var(--second-font-size);
 }
