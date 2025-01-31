@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" type="image/x-icon" href="favicon/favicon.ico"><!--Link to favicon-->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--Link to boxicons--><!--Link to boxicons-->
-        <script src="scripts/script.js"></script><!--Link to script file-->
+        <script src="scripts/script.js" defer></script><!--Link to script file-->
     </head>
     <body>
         <header>
@@ -17,33 +17,33 @@
         </header>
         <main>
            <!--Insert form here-->
-           <form action="">
+           <form action="" id="userForm" novalidate>
                <!--Insert form title-->
                <h2>Please Fill Out the Form</h2>
 
                <!--Prompt the user for first name-->
                <label for="firstName">First Name:</label> <br>
-               <input type="text" id="firstName" name="firstName"> <br>
+               <input type="text" id="firstName" name="firstName" required> <br>
 
                <!--Prompt the user for last name-->
                <label for="lastName">Last Name:</label> <br>
-               <input type="text" id="lastName" name="lastName"> <br>
+               <input type="text" id="lastName" name="lastName" required> <br>
 
                <!--Prompt the user for email-->
                <label for="email">Email:</label> <br>
-               <input type="email" id="email" name="email" autocomplete="email"> <br>
+               <input type="email" id="email" name="email" autocomplete="email" required> <br>
 
                <!--Prompt the user for phone number-->
                <label for="phoneNumber">Phone Number:</label> <br>
-               <input type="tel" id="phoneNumber" name="phoneNumber"> <br>
+               <input type="tel" id="phoneNumber" name="phoneNumber" required> <br>
 
                <!--Prompt the user for address-->
                <label for="address">Address:</label> <br>
-               <input type="text" id="address" name="address" autocomplete="street-address"> <br>
+               <input type="text" id="address" name="address" autocomplete="street-address" required> <br>
 
                <!--Prompt the user for age-->
                <label for="age">Age:</label> <br>
-               <select name="age" id="age">
+               <select name="age" id="age" required>
                    <option value="" disabled selected>Select Age</option>
                </select><br>
 
@@ -74,15 +74,11 @@
 
                <!--Prompt the user for subject line-->
                <label for="subjectLine">Subject Line:</label> <br>
-               <input type="text" id="subjectLine" name="subjectLine"> <br>
+               <input type="text" id="subjectLine" name="subjectLine" required> <br>
 
                <!--Prompt the user for message-->
                <label for="message">Message:</label> <br>
-               <textarea id="message" name="message"></textarea> <br>
-
-               <!--Prompt the user for file upload-->
-               <label for="fileUpload">File Upload:</label> <br>
-               <input type="file" id="fileUpload" name="fileUpload"> <br>
+               <textarea id="message" name="message" required rows="8"></textarea> <br>
 
                <div class="buttonContainer">
                 <!--Submit button-->
