@@ -13,45 +13,54 @@
             <h1>Form API</h1>
 
             <!--Insert hamburger menu-->
-            <i class='bx bx-menu'></i>
+            <i class='bx bx-menu' id="hamburger"></i>
+
+            <!--Create navigation bar-->
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                </ul>
+            </nav>
+
+            <!--Insert overlay for clicking outside-->
+            <div id="overlay"></div>
         </header>
         <main>
            <!--Insert form here-->
-           <form action="" id="userForm" novalidate>
+           <form action="#" id="userForm" aria-labelledby="formTitle" novalidate>
                <!--Insert form title-->
-               <h2>Please Fill Out the Form</h2>
+               <h2 id="formTitle">Please Fill Out the Form</h2>
 
                <!--Prompt the user for first name-->
                <label for="firstName">First Name:</label> <br>
-               <input type="text" id="firstName" name="firstName" required> <br>
+               <input type="text" id="firstName" name="firstName" required aria-required="true"> <br>
 
                <!--Prompt the user for last name-->
                <label for="lastName">Last Name:</label> <br>
-               <input type="text" id="lastName" name="lastName" required> <br>
+               <input type="text" id="lastName" name="lastName" required aria-required="true"> <br>
 
                <!--Prompt the user for email-->
                <label for="email">Email:</label> <br>
-               <input type="email" id="email" name="email" autocomplete="email" required> <br>
+               <input type="email" id="email" name="email" autocomplete="email" required aria-required="true"> <br>
 
                <!--Prompt the user for phone number-->
                <label for="phoneNumber">Phone Number:</label> <br>
-               <input type="tel" id="phoneNumber" name="phoneNumber" required> <br>
+               <input type="tel" id="phoneNumber" name="phoneNumber" required aria-required="true"> <br>
 
                <!--Prompt the user for address-->
                <label for="address">Address:</label> <br>
-               <input type="text" id="address" name="address" autocomplete="street-address" required> <br>
+               <input type="text" id="address" name="address" autocomplete="address-level1" required aria-required="true"> <br>
 
                <!--Prompt the user for age-->
                <label for="age">Age:</label> <br>
-               <select name="age" id="age" required>
+               <select name="age" id="age" required aria-required="true">
                    <option value="" disabled selected>Select Age</option>
                </select><br>
 
-               <!--Prompt the user for year in school -->
-               <label for="year">Year:</label> <br>
-
                <!--Create radio container-->
-               <div class="radioContainer">
+               <div class="radioContainer" role="radiogroup">
                 <!--Create radio buttons-->
 
                 <!--Freshman-->
@@ -78,7 +87,7 @@
 
                <!--Prompt the user for message-->
                <label for="message">Message:</label> <br>
-               <textarea id="message" name="message" required rows="8"></textarea> <br>
+               <textarea id="message" name="message" required rows="8" aria-required="true"></textarea> <br>
 
                <div class="buttonContainer">
                 <!--Submit button-->
