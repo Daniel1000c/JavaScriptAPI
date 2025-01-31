@@ -46,12 +46,12 @@ body {
 }
 
 @font-face {
-    font-family: 'MPLUSRounded1c-Regular', sans-serif;
+    font-family: 'MPLUSRounded1c-Regular';
     src: url(../fonts/MPLUSRounded1c-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'MPLUSRounded1c-ExtraBold', sans-serif;
+    font-family: 'MPLUSRounded1c-ExtraBold';
     src: url(../fonts/MPLUSRounded1c-ExtraBold.ttf);
 }
 /************End of Font Face Formatting************/
@@ -88,6 +88,79 @@ header h1 {
     border: 5px solid white;
     border-radius: 8px;
     color: white;
+}
+
+/*Format x icon*/
+.bx-x {
+    padding: 10px;
+    font-size: 7em;
+    border: 5px solid white;
+    border-radius: 8px;
+    z-index: 4;
+    color: white;
+}
+
+/*Format nav menu*/
+#navMenu {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100vh;
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /*Create dark linear gradient*/
+        url(../images/bannerMenu.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: right 0.5s ease-in-out;
+    z-index: 3;
+}
+
+/*Create active nav state*/
+#navMenu.active {
+    right: 0;
+}
+
+/*Format nav menu links*/
+#navMenu ul {
+    list-style-type: none;
+    margin-left: 35px;
+}
+
+/*Format nav menu links*/
+#navMenu li {
+    margin: 30px;
+    margin-bottom: 150px;
+}
+
+/*Format nav menu links*/
+#navMenu a {
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 6em;
+}
+
+/*Create overlay for nav menu*/
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 2;
+}
+
+/*Create active overlay state*/
+#overlay.active {
+    display: block;
 }
 /************End of Header Formatting************/
 
@@ -240,6 +313,61 @@ footer {
 
 /**Desktop View**/
 @media screen and (min-width: 1300px) {
+    /*Format nav bar*/
+    #hamburger {
+        display: none;
+    }
+
+    /*Format nav menu*/
+    #navMenu {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        transition: none;
+        background-image: none;
+    }
+
+    /*Format nav menu items*/
+    #navMenu ul {
+        display: flex;
+        transform: none;
+        margin-left: 0;
+    }
+
+    /*Format nav menu list*/
+    #navMenu li {
+        margin: 0 50px;
+    }
+
+    /*Format nav menu links*/
+    #navMenu a {
+        font-size: 2em;
+        transition: 0.5s ease-in;/*Create button hover effect*/
+        background-color: #dd7973;
+        padding: 15px;
+        display: inline-block;
+        width: 150px;
+        text-align: center;
+        border-radius: 50px;
+        transition: 0.5s ease;/*Create hover transition*/
+    }
+
+    /*Create button hover effect*/
+    #navMenu a:hover {
+        background: transparent;
+        border: 2px solid #dd7973;
+        color: #dd7973;
+    }
+
+    /*Get rid of overlay*/
+    #overlay {
+        display: none;
+    }
 
     /*Format form tag*/
     form {
