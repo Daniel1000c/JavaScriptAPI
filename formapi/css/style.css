@@ -133,7 +133,9 @@ label {
 }
 
 /*Format form inputs*/
-
+input {
+    margin-bottom: 15px;
+}
 
 /*Format select*/
 select {
@@ -149,6 +151,7 @@ select {
 option {
     font-size: 20px;
 }
+
 /*text inputs*/
 input[type="text"]{
     margin-top: 15px;
@@ -156,6 +159,7 @@ input[type="text"]{
     font-size: 4em;
     border-radius: 8px;
     border: 2px solid black;
+    padding-left: 15px;
 }
 
 /*Email inputs*/
@@ -165,6 +169,7 @@ input[type="email"]{
     font-size: 4em;
     border-radius: 8px;
     border: 2px solid black;
+    padding-left: 15px;
 }
 
 /*Phone number inputs*/
@@ -174,6 +179,7 @@ input[type="tel"]{
     font-size: 4em;
     border-radius: 8px;
     border: 2px solid black;
+    padding-left: 15px;
 }
 
 /*Format radio input*/
@@ -189,18 +195,10 @@ textarea {
     margin-top: 15px;
     margin-bottom: 15px;
     width: 100%;
-    font-size: 10em;
-    border-radius: 8px;
-    border: 2px solid black;
-}
-
-/*File inputs*/
-input[type="file"] {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 100%;
     font-size: 3em;
     border-radius: 8px;
+    border: 2px solid black;
+    padding-left: 15px;
 }
 
 /*Format button container*/
@@ -236,4 +234,49 @@ footer {
 /************End of Footer Formatting************/
 
 
+
+/************Media Query Formatting************/
+
+/**Desktop View**/
+@media screen and (min-width: 1300px) {
+
+    /*Format form tag*/
+    form {
+        width: 45%;
+    }
+
+
+    /*Format form labels*/
+    label {
+        font-size: 2em;
+    }
+
+    /*Format input sizes*/
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        font-size: 2em;
+    }
+
+    /*Format radio container*/
+    .radioContainer {
+        margin-bottom: 15px;
+    }
+    /*Format submit button*/
+    input[type="submit"] {
+        font-size: 3em;
+        transition: 0.5s ease-in;/*Create hover transition*/
+    }
+
+    /*Format submit button on hover*/
+    input[type="submit"]:hover {
+        background: transparent;
+        border: 2px solid #dd7973;
+        color: #dd7973;
+        box-shadow: 0 0 10px black;
+    }
+}
+/************End of Media Query Formatting************/
 
