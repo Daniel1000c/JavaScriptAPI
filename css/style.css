@@ -250,3 +250,83 @@ footer {
     background-color: rgba(212, 212, 212, 0.8);
 }
 /************End of Footer Formatting************/
+
+/************Media Query Formatting************/
+
+/**Desktop Media Query Formatting**/
+@media screen and (min-width: 1300px) {
+
+    /*Format hero section*/
+    .heroSection {
+        height: 50vh;
+    }
+
+    /*Format hero content h2*/
+    .heroContent h2 {
+        font-size: 4em;
+    }
+
+    /*Format hero content a*/
+    .heroContent a {
+        font-size: 2em;
+        padding: 30px;
+        width: 50%;
+        transition: 0.5s ease-in;/*Create button hover effect*/
+    }
+
+    /*Create button hover effect*/
+    .heroContent a:hover {
+       background-color: #9ce2e1;
+       color: white;
+    }
+    /*Format about section*/
+    .aboutContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*Format about section text*/
+    .aboutContainer p {
+        width: 65%;
+        padding: 50px;
+        font-size: 2em;
+        text-align: left;
+    }
+    /*Format project grid*/
+    .projectGrid {
+        grid-template-columns: 1fr 1fr 1fr;/*Create a 3 column grid*/
+        gap: 50px;
+        padding: 15px;
+    }
+
+    /*Format project grid items*/
+    .projectGridItem {
+        width: 100%;
+        transition: 0.5s ease-in;/*Create hover outline effect*/
+    }
+
+    /*Create outline hover effect*/
+    .projectGridItem:hover {
+        outline: 2px solid #dd7973;
+        transform: scale(1.1);
+    }
+
+    /*Format project grid item buttons*/
+    .projectGridItem a {
+        width: 60%;
+        font-size: 2em;
+    }
+
+    /*Format project grid item h3 tags*/
+    .projectGridItem h3 {
+        font-size: 2em;
+    }
+
+    /*Format project grid item images*/
+    .projectGridItem img {
+        width: 100%;
+    }
+}
+/************End of Media Query Formatting************/
