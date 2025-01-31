@@ -4,6 +4,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/*Format smooth scrolling behavior*/
+html {
+    scroll-behavior: smooth;
+}
 /************End of general formatting************/
 
 /************Animation Formatting************/
@@ -54,6 +59,7 @@
 
 /************Header Formatting************/
 header {
+    position: relative;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -68,6 +74,77 @@ header {
     font-size: 7em;
     border: 5px solid black;
     border-radius: 8px;
+    color: black;
+    z-index: 3;
+}
+
+/*Format x icon*/
+.bx-x {
+    padding: 10px;
+    font-size: 7em;
+    border: 5px solid black;
+    border-radius: 8px;
+    z-index: 4;
+    color: black;
+}
+
+/*Format nav menu*/
+#navMenu {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100vh;
+    background: lightgray;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: right 0.5s ease-in-out;
+    z-index: 3;
+}
+
+/*Create active nav state*/
+#navMenu.active {
+    right: 0;
+}
+
+/*Format nav menu links*/
+#navMenu ul {
+    list-style-type: none;
+    transform: translateY(-90%);
+    margin-left: 35px;
+}
+
+/*Format nav menu links*/
+#navMenu li {
+    margin: 30px;
+}
+
+/*Format nav menu links*/
+#navMenu a {
+    color: black;
+    text-decoration: none;
+    font-family: var(--primary-round-font);
+    font-size: 6em;
+}
+
+/*Create overlay for nav menu*/
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 2;
+}
+
+/*Create active overlay state*/
+#overlay.active {
+    display: block;
 }
 
 /*Format site logo*/
@@ -256,6 +333,59 @@ footer {
 /**Desktop Media Query Formatting**/
 @media screen and (min-width: 1300px) {
 
+    /*Format header logo*/
+    header img {
+        width: 150px;
+    }
+
+    /*Format nav bar*/
+    #hamburger {
+        display: none;
+    }
+
+    /*Format nav menu*/
+    #navMenu {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        transition: none;
+    }
+
+    /*Format nav menu items*/
+    #navMenu ul {
+        display: flex;
+        transform: none;
+        margin-left: 0;
+    }
+
+    /*Format nav menu list*/
+    #navMenu li {
+        margin: 0 50px;
+    }
+
+    /*Format nav menu links*/
+    #navMenu a {
+        font-size: 2em;
+        transition: 0.5s ease-in;/*Create button hover effect*/
+    }
+
+    /*Create button hover effect*/
+    #navMenu a:hover {
+        color: white;
+        text-decoration: underline;
+        font-size: 2.5em;
+    }
+
+    /*Get rid of overlay*/
+    #overlay {
+        display: none;
+    }
+
     /*Format hero section*/
     .heroSection {
         height: 50vh;
@@ -298,12 +428,14 @@ footer {
     .projectGrid {
         grid-template-columns: 1fr 1fr 1fr;/*Create a 3 column grid*/
         gap: 50px;
+        align-items: stretch;
         padding: 15px;
     }
 
     /*Format project grid items*/
     .projectGridItem {
         width: 100%;
+        height: 100%;
         transition: 0.5s ease-in;/*Create hover outline effect*/
     }
 
@@ -327,6 +459,7 @@ footer {
     /*Format project grid item images*/
     .projectGridItem img {
         width: 100%;
+        object-fit: cover;
     }
 }
 /************End of Media Query Formatting************/
