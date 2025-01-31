@@ -85,8 +85,9 @@ header h1 {
 .bx-menu {
     padding: 10px;
     font-size: 7em;
-    border: 5px solid black;
+    border: 5px solid white;
     border-radius: 8px;
+    color: white;
 }
 /************End of Header Formatting************/
 
