@@ -80,7 +80,7 @@ html {
     --card-title-font-family: 'CreteRound-Regular';/*Font family for h3 tags in project item titles*/
     --card-font-size: 4em;/*Font size for h3 tags in project item titles*/
     --footer-font-family: monospace;;
-    --footer-font-size: 1em;/*Font size for footer*/
+    --footer-font-size: 2em;/*Font size for footer*/
 }
 /************End of Root Formatting************/
 
@@ -267,16 +267,16 @@ section h2 {
 /*Format hero content a*/
 .heroContent a {
     font-family: var(--primary-round-font);
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bolder;
     text-decoration: none;
     text-transform: uppercase;
     background-color: #BDFFFD;
     padding: 50px;
-    border-radius: 10px;
+    border-radius: 100px;
     color: black;
     display: inline-block;
-    width: 60%;
+    width: 50%;
     margin-top: 20px;
     animation: appear 1s ease-in;/*Create appear animation*/
 }
@@ -340,29 +340,31 @@ section h2 {
 .projectGrid {
     display: grid;
     grid-template-columns: 1fr;/*Create a 1 column grid*/
-    gap: 20px;
+    gap: 50px;
     padding: 15px;
 }
 
 /*Format Project Grid Items*/
 .projectGridItem {
-    background-image: url(../images/darkcardbg.jpg);
-    background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
     width: 75%;
-    border-radius: 10px;
+    border-radius: 70px;
     padding: 50px;
+    background-image: url(../images/blueCard.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 /*Format Project Grid Item Images*/
 .projectGridItem img {
     width: 100%;
+    height: 400px;
     padding: 20px;
+    margin-bottom: 50px;
     border-radius: 15px;
 }
 
@@ -370,24 +372,19 @@ section h2 {
 .projectGridItem h3 {
     font-family: var(--card-title-font-family);
     font-size: var(--card-font-size);
-    color: white;
+    color: black;
     padding: 20px;
+    margin-bottom: 50px;
 }
 
 /*Format project grid item buttons*/
-.projectGridItem a {
-    margin-top: 10px;
-    background-color: #f5f5f5;
-    font-size: 4.5em;
-    padding: 30px;
-    color: black;
-    text-decoration: none;
-    font-weight: bolder;
-    font-family: sans-serif;
-    text-transform: uppercase;
+.projectGridItem .btn-primary {
     display: inline-block;
-    width: 80%;
-    border-radius: 10px;
+    width: 60%;
+    padding: 20px;
+    font-size: 3em;
+    font-family: sans-serif;
+    border-radius: 100px;
 }
 /************End of Section Formatting************/
 
@@ -471,15 +468,15 @@ footer {
 
     /*Format hero content a*/
     .heroContent a {
-        font-size: 2em;
+        font-size: 1.5em;
         padding: 30px;
-        width: 50%;
+        width: 40%;
         transition: 0.5s ease-in;/*Create button hover effect*/
     }
 
     /*Create button hover effect*/
     .heroContent a:hover {
-       background-color: #9ce2e1;
+       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #9ce2e1;
        color: white;
     }
     /*Format about section*/
@@ -527,6 +524,7 @@ footer {
         font-size: 1.5em;
         width: 100%;
     }
+
     /*Format project grid*/
     .projectGrid {
         grid-template-columns: 1fr 1fr 1fr;/*Create a 3 column grid*/
@@ -539,13 +537,17 @@ footer {
     .projectGridItem {
         width: 100%;
         height: 100%;
+        object-fit: cover;
         transition: 0.5s ease-in;/*Create hover outline effect*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    /*Create outline hover effect*/
-    .projectGridItem:hover {
-        outline: 2px solid #dd7973;
-        transform: scale(1.1);
+    /*Format projecct grid item button*/
+    .projectGridItem .btn-primary {
+        width: 40%;
+        font-size: 1.5em;
     }
 
     /*Format project grid item buttons*/
@@ -562,6 +564,7 @@ footer {
     /*Format project grid item images*/
     .projectGridItem img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 }
