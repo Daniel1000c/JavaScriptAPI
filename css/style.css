@@ -508,6 +508,25 @@ footer {
         text-align: left;
     }
 
+    /*Format project highlight section to be scrollable*/
+    .projectHighlights {
+        overflow: hidden;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+
+    }
+
+    /*Hide scroll bar*/
+    .projectHighlights::-webkit-scrollbar {
+        display: none;
+    }
+
     /*Format project highlight items*/
     .projectHighlightItem i {
         font-size: 3em;
