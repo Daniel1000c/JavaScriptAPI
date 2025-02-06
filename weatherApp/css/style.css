@@ -1,0 +1,19 @@
+/********************General Formatting********************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Body formatting*/
+body {
+    background-image: url(../images/beautiful-clouds-digital-art.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/********************End of General Formatting********************/
+
+/********************Header Formatting********************/
+
+/********************End of Header Formatting********************/
