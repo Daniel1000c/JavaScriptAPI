@@ -5,16 +5,40 @@
         <title>Weather App</title>
         <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"><!--Insert boostrap link-->
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"><!--Insert boxicon link-->
+        <script src="jquery/jquery3.7.1.js"></script><!--Link to Jquery script file-->
     </head>
     <body>
         <header>
-            <h1>Weather App</h1>
+            <!--Insert bootstrap nav bar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                <a class="navbar-brand" href="index.html">Weather App <i class='bx bxs-sun' ></i></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="../index.html#home">Back To Home</a>
+                    <a class="nav-item nav-link" href="index.html#about">About Weather App</a>
+                    <a class="nav-item nav-link" href="../index.html#projects">See More Projects</a>
+                  </div>
+                </div>
+            </nav>
         </header>
         <main>
-            
+            <!--Create weather app container-->
+            <section class="weatherContainer">
+                <h2>The Weather</h2>
+            </section>
+
+            <!--Create about Section-->
+            <section id="about" class="aboutContainer">
+                <h2>About Weather App</h2>
+            </section>
         </main>
         <footer>
-            &copy; 2024 Broward College
+            &copy; 2024 ScriptLab | All Rights Reserved
         </footer>
     </body>
 </html>
