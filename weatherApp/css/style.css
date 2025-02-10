@@ -1,3 +1,11 @@
+/********************Font Formatting********************/
+/*Import M Plus round font*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+/*Import Nunito San*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+/********************End of Font Formatting********************/
+
 /********************General Formatting********************/
 * {
     padding: 0;
@@ -7,13 +15,89 @@
 
 /*Body formatting*/
 body {
-    background-image: url(../images/beautiful-clouds-digital-art.jpg);
+    background-image: url(../images/lightClouds.jpeg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 /********************End of General Formatting********************/
 
+/********************Root Formatting********************/
+:root {
+    --section-header-font-family: 'Nunito Sans';
+    --section-header-font-size: 5em;
+}
+/********************End of Root Formatting********************/
+
 /********************Header Formatting********************/
+/*Format nav bar*/
+.navbar {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.navbar a {
+    padding: 10px;
+    font-size: 4em;
+    align-items: center;
+    color: white;
+}
+
+/*Format icon in nav bar*/
+a i {
+    color: orange;
+    font-size: 1em;
+}
+
+/*Format hamburger menu*/
+
 
 /********************End of Header Formatting********************/
+
+/********************Section Formatting********************/
+/*Format weather container*/
+.weatherContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 100px 20px 20px 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*Format weather container h2 tag*/
+.weatherContainer h2 {
+    font-family: var(--section-header-font-family);
+    font-weight: bolder;
+    font-size: var(--section-header-font-size);
+}
+
+/*Format about section*/
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 80px 20px 20px 20px;
+}
+
+/*Format about section h2*/
+.aboutContainer h2 {
+    font-family: var(--section-header-font-family);
+    font-size: var(--section-header-font-size);
+    font-weight: bolder;
+}
+/********************End of Section Formatting********************/
+
+/********************Footer Formatting********************/
+footer {
+    text-align: center;
+    font-family: monospace;
+    font-size: 2em;
+    background-color: #0d6ffc;
+    color: white;
+    padding: 20px;
+}
+/********************End of sFooter Formatting********************/
