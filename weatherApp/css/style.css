@@ -4,6 +4,9 @@
 
 /*Import Nunito San*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/*Import Barlow*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /********************End of Font Formatting********************/
 
 /********************General Formatting********************/
@@ -26,6 +29,8 @@ body {
 :root {
     --section-header-font-family: 'Nunito Sans';
     --section-header-font-size: 5em;
+    --about-text-font-family: 'Barlow';
+    --about-text-font-size: 3.2em;
 }
 /********************End of Root Formatting********************/
 
@@ -48,7 +53,13 @@ a i {
 }
 
 /*Format hamburger menu*/
+.navbar-toggler {
+    margin-right: 25px;
+}
 
+.navbar-toggler-icon {
+    font-size: 3em;
+}
 
 /********************End of Header Formatting********************/
 
@@ -89,6 +100,41 @@ a i {
     font-size: var(--section-header-font-size);
     font-weight: bolder;
 }
+
+/*Format text container*/
+.textContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+/*Format text container img*/
+.textContainer img {
+    max-width: 50%;
+}
+
+/*Format text container text*/
+.textContainer p {
+    font-size: var(--about-text-font-size);
+    font-family: var(--about-text-font-family);
+    line-height: 2;
+    letter-spacing: 2px;
+    background-color: #2b4570;
+    border-radius: 15px;
+    color: white;
+    padding: 30px;
+    margin-top: 25px;
+}
+
+/*Capitalize first letter of p tag*/
+.textContainer p::first-letter {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2em;
+    margin-right: 15px;
+}
 /********************End of Section Formatting********************/
 
 /********************Footer Formatting********************/
@@ -98,6 +144,6 @@ footer {
     font-size: 2em;
     background-color: #0d6ffc;
     color: white;
-    padding: 20px;
+    padding: 30px;
 }
 /********************End of sFooter Formatting********************/
