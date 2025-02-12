@@ -23,6 +23,8 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+
+/*Format h3 h4 tags*/
 /********************End of General Formatting********************/
 
 /********************Root Formatting********************/
@@ -39,12 +41,23 @@ body {
 .navbar {
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
+/*Format nav link logo*/
 .navbar a {
     padding: 10px;
     font-size: 4em;
     align-items: center;
-    color: white;
+    color: orange;
+    font-weight: bolder;
 }
+
+/*Format nav links in collapse div*/
+.navbar-collapse a {
+    color: white;
+    font-weight: normal;
+    font-family: monospace;
+}
+
 
 /*Format icon in nav bar*/
 a i {
@@ -66,7 +79,7 @@ a i {
 /********************Section Formatting********************/
 /*Format weather container*/
 .weatherContainer {
-    background-color: white;
+    background-color: #0d6ffc;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,6 +97,55 @@ a i {
     font-size: var(--section-header-font-size);
 }
 
+/*Format search container*/
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 3em;
+}
+
+/*Format search input field*/
+.searchBar input {
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-right: 25px;
+    padding: 25px;
+}
+
+/*Format search button*/
+.searchBar button {
+    background: white;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-right: 25px;
+    padding: 25px;
+    text-align: center;
+    font-size: 65px;
+    width: 150px;
+}
+
+/*Format weather result container*/
+.weatherResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 50px 20px 20px 20px;
+}
+
+/*Format weather icon*/
+.weatherIcon {
+    width: 100%;
+}
 /*Format about section*/
 .aboutContainer {
     display: flex;
