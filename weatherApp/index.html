@@ -8,6 +8,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"><!--Insert boostrap link-->
         <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"><!--Insert boxicon link-->
         <script src="jquery/jquery3.7.1.js"></script><!--Link to Jquery script file-->
+        <script src="scripts/script.js"></script><!--Link to script file-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><!--Insert bootstrap script link-->
     </head>
     <body>
@@ -32,6 +33,22 @@
             <section class="weatherContainer">
                 <h2>The Weather</h2>
                 
+                <!--Create search bar-->
+                <div class="searchBar">
+                    <input type="text" id="searchInput" placeholder="Search for a City" spellcheck="false">
+                    <button><i class='bx bx-search'></i></button>
+                </div>
+                <!--Create search results container-->
+                    <div class="weatherResult">
+                        <img class="weatherIcon" src="images/cloudy.png">
+                        <h3 class="temp">22C</h3>
+                        <h4 class="cityName">Germany</h4>
+
+                        <!--Insert details column-->
+                        <div class="details">
+                            
+                        </div>   
+                    </div>
             </section>
 
             <!--Create about Section-->
