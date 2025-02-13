@@ -9,203 +9,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /********************End of Font Formatting********************/
 
+/********************Root Formatting********************/
+:root {
+    --primary-title-font: 'M Plus Rounded 1c', sans-serif;
+    --primary-title-font-size: 1.6em;
+    --navigation-link-font: monospace;
+    --navigation-font-size: 1.4em;
+    --footer-font: 'Nunito Sans', sans-serif;
+    --footer-sub-font: 'Barlow', sans-serif;
+}
+/********************End of Root Formatting********************/
+
 /********************General Formatting********************/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
-/*Body formatting*/
-body {
-    background-image: url(../images/lightClouds.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/*Format h3 h4 tags*/
 /********************End of General Formatting********************/
 
-/********************Root Formatting********************/
-:root {
-    --section-header-font-family: 'Nunito Sans';
-    --section-header-font-size: 5em;
-    --about-text-font-family: 'Barlow';
-    --about-text-font-size: 3.2em;
-}
-/********************End of Root Formatting********************/
-
 /********************Header Formatting********************/
-/*Format nav bar*/
-.navbar {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-}
 
-/*Format nav link logo*/
-.navbar a {
-    padding: 10px;
-    font-size: 4em;
-    align-items: center;
+/**Navbar formatting**/
+
+/*Format nav bar brand color*/
+.navbar-brand {
     color: orange;
-    font-weight: bolder;
+    font-family: var(--primary-title-font);
+    font-size: var(--primary-title-font-size);
+    font-weight: bold;
 }
 
-/*Format nav links in collapse div*/
-.navbar-collapse a {
+/*Format nav links*/
+.nav-link {
+    font-family: var(--navigation-link-font);
+    font-size: var(--navigation-font-size);
     color: white;
-    font-weight: normal;
-    font-family: monospace;
 }
 
-
-/*Format icon in nav bar*/
-a i {
-    color: orange;
-    font-size: 1em;
-}
-
-/*Format hamburger menu*/
+/*Format box menu icon*/
 .navbar-toggler {
-    margin-right: 25px;
+    border: 2px solid white;
 }
 
 .navbar-toggler-icon {
-    font-size: 3em;
 }
-
 /********************End of Header Formatting********************/
 
-/********************Section Formatting********************/
-/*Format weather container*/
-.weatherContainer {
-    background-color: #0d6ffc;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    margin: 100px 20px 20px 20px;
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-/*Format weather container h2 tag*/
-.weatherContainer h2 {
-    font-family: var(--section-header-font-family);
-    font-weight: bolder;
-    font-size: var(--section-header-font-size);
-}
-
-/*Format search container*/
-.searchBar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-size: 3em;
-}
-
-/*Format search input field*/
-.searchBar input {
-    border: none;
-    outline: none;
-    padding: 15px;
-    border-radius: 50px;
-    margin-top: 25px;
-    margin-right: 25px;
-    padding: 25px;
-}
-
-/*Format search button*/
-.searchBar button {
-    background: white;
-    border: none;
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
-    margin-top: 25px;
-    margin-right: 25px;
-    padding: 25px;
-    text-align: center;
-    font-size: 65px;
-    width: 150px;
-}
-
-/*Format weather result container*/
-.weatherResult {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    margin: 50px 20px 20px 20px;
-}
-
-/*Format weather icon*/
-.weatherIcon {
-    width: 100%;
-}
-/*Format about section*/
-.aboutContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    margin: 80px 20px 20px 20px;
-}
-
-/*Format about section h2*/
-.aboutContainer h2 {
-    font-family: var(--section-header-font-family);
-    font-size: var(--section-header-font-size);
-    font-weight: bolder;
-}
-
-/*Format text container*/
-.textContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px;
-}
-
-/*Format text container img*/
-.textContainer img {
-    max-width: 50%;
-}
-
-/*Format text container text*/
-.textContainer p {
-    font-size: var(--about-text-font-size);
-    font-family: var(--about-text-font-family);
-    line-height: 2;
-    letter-spacing: 2px;
-    background-color: #2b4570;
-    border-radius: 15px;
-    color: white;
-    padding: 30px;
-    margin-top: 25px;
-}
-
-/*Capitalize first letter of p tag*/
-.textContainer p::first-letter {
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 2em;
-    margin-right: 15px;
-}
-/********************End of Section Formatting********************/
-
 /********************Footer Formatting********************/
-footer {
+Footer {
     text-align: center;
-    font-family: monospace;
-    font-size: 2em;
-    background-color: #0d6ffc;
+    background-color: #0d6efd;
+    padding: 5%;
     color: white;
-    padding: 30px;
+    font-family: var(--footer-font);
+    font-size: 0.8em;
 }
-/********************End of sFooter Formatting********************/
+
+/*Format footer p tag*/
+footer p {
+    margin-top: 25px;
+}
+
+/*Format quick links container*/
+.quickLinks {
+    text-align: left;
+}
+
+/*Format quick links heading*/
+.quickLinks h3 {
+    color: orange;
+    font-family: var(--footer-sub-font);
+    font-weight: bolder;
+}
+
+/*Format quick link a tags*/
+.quickLinks p a {
+    color: white;
+    font-family: var(--navigation-link-font);
+    text-decoration: none;
+    letter-spacing: 1.2px;
+}
+
+/*Format social media container*/
+.socialMedia {
+    text-align: left;
+}
+
+/*Format social media header*/
+.socialMedia h3 {
+    color: orange;
+    font-family: var(--footer-sub-font);
+    font-weight: bold;
+}
