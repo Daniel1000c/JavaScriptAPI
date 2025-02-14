@@ -1,3 +1,14 @@
+/************Font Formatting************/
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Roboto Slab*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Merriweather*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/************End of Font Formatting************/
+
 /************General Formatting************/
 * {
     padding: 0;
@@ -49,159 +60,32 @@ html {
 }
 /************End of Animation Formatting************/
 
-/************Font face Formatting************/
-@font-face {
-    font-family: 'VarelaRound-Regular';
-    src: url(../fonts/VarelaRound-Regular.ttf);
-}
-
-@font-face {
-    font-family: 'Quicksand-VariableFont_wght';
-    src: url(../fonts/Quicksand-VariableFont_wght.ttf);
-}
-
-@font-face {
-    font-family: 'CreteRound-Regular';
-    src: url(../fonts/CreteRound-Regular.ttf);
-}
-
-@font-face {
-    font-family: 'Barlow-Regular';
-    src: url(../fonts/Barlow-Regular.ttf);
-}
-/************End of Font face Formatting************/
-
-/************Root Formatting************/
+/************Root formatting************/
 :root {
-    --primary-round-font: 'VarelaRound-Regular';/*Font font family for h1 tags*/
-    --primary-font-size: 6.5em;/*Primary font size*/
-    --secondary-round-font: 'Quicksand-VariableFont_wght';/*Font family for h2 tags*/
-    --second-font-size: 5em;/*Second font size for h2 tags*/
-    --card-title-font-family: 'CreteRound-Regular';/*Font family for h3 tags in project item titles*/
-    --card-font-size: 4em;/*Font size for h3 tags in project item titles*/
-    --footer-font-family: monospace;;
-    --footer-font-size: 2em;/*Font size for footer*/
+    --navigation-font: 'Roboto', sans-serif;
+    --footer-font: 'Roboto Slab', sans-serif;
+    --section-title-font: 'Merriweather', sans-serif;
 }
-/************End of Root Formatting************/
+/************Header formatting************/
 
-/************Header Formatting************/
-header {
-    position: relative;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    animation: fadedown 1s ease-in-out;
+/*Format nav bar brand img*/
+.navbar-brand img {
+   width: 60px;
 }
 
-/*Format hamburger menu*/
-.bx-menu {
-    padding: 10px;
-    font-size: 5em;
-    border: 5px solid black;
-    border-radius: 8px;
-    color: black;
-    z-index: 3;
+/*Format nav bar links*/
+.nav-item {
+    font-family: var(--navigation-font);
+    font-size: 1.4em;
 }
+/************End of Header formatting************/
 
-/*Format x icon*/
-.bx-x {
-    padding: 10px;
-    font-size: 5em;
-    border: 5px solid black;
-    border-radius: 8px;
-    z-index: 4;
-    color: black;
-}
+/************Section formatting************/
 
-/*Format nav menu*/
-#navMenu {
-    position: fixed;
-    top: 0;
-    right: -500px;
-    width: 500px;
-    height: 100vh;
-    background: lightgray;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    transition: right 0.5s ease-in-out;
-    z-index: 3;
-}
-
-/*Create active nav state*/
-#navMenu.active {
-    right: 0;
-}
-
-/*Format nav menu links*/
-#navMenu ul {
-    list-style-type: none;
-    transform: translateY(-90%);
-    margin-left: 35px;
-}
-
-/*Format nav menu links*/
-#navMenu li {
-    margin: 30px;
-}
-
-/*Format nav menu links*/
-#navMenu a {
-    color: black;
-    text-decoration: none;
-    font-family: var(--primary-round-font);
-    font-size: 6em;
-}
-
-/*Create overlay for nav menu*/
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 2;
-}
-
-/*Create active overlay state*/
-#overlay.active {
-    display: block;
-}
-
-/*Format site logo*/
-.siteLogo {
-    max-width: 200px;
-    max-height: 180px;
-}
-/************End of Header Formatting************/
-
-/************Section Formatting************/
-section {
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/*Format section h2 tags*/
-section h2 {
-    padding: 20px;
-    font-family: var(--secondary-round-font);
-    font-size: var(--second-font-size);
-}
-
-/**Hero section formatting**/
-
-/*Format hero section*/
 .heroSection {
     position: relative;
     width: 100%;
-    height: 35vh;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -246,7 +130,7 @@ section h2 {
     font-size: var(--second-font-size);
     color: white;
     padding: 20px;
-    margin-bottom: 50px;
+    font-size: 1.6em;
 }
 
 /*Format hero content h2 span*/
@@ -266,325 +150,55 @@ section h2 {
 
 /*Format hero content a*/
 .heroContent a {
-    font-family: var(--primary-round-font);
-    font-size: 2em;
+    font-family: var(--navigation-font);
+    font-size: 1em;
     font-weight: bolder;
     text-decoration: none;
     text-transform: uppercase;
     background-color: #BDFFFD;
-    padding: 50px;
-    border-radius: 100px;
     color: black;
     display: inline-block;
-    width: 50%;
     margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 100px;
     animation: appear 1s ease-in;/*Create appear animation*/
 }
 
-/**About section Formatting**/
-
-/*Format about section*/
-.aboutContainer {
-    margin-bottom: 50px;
-    text-align: left;
-    margin: 50px;
-}
-
-/*Format about section text*/
-.aboutContainer p {
-    letter-spacing: 2px;
-    line-height: 2;
-    font-family: 'Barlow-Regular', sans-serif;
-    font-weight: bolder;
-    font-size: 2.3em;
-    text-align: left;
-    padding: 20px;
-}
-
-/*Format project highlight item*/
-.projectHighlightItem {
-    text-align: left;
-    margin-top: 80px;
-    margin: 80px 20px 20px 20px;
-}
-
-/*Format project high boxicon*/
-.projectHighlightItem i {
-    font-size: 10em;
-    padding: 25px;
-    background-color: #9ce2e1;
-    border-radius: 50%;
-}
-
-/*Format project highlight item h3*/
-.projectHighlightItem h3 {
-    font-family: var(--primary-round-font);
-    font-size: 5em;
-    color: black;
-    padding: 20px;
-}
-
-/*Format project highlight item p*/
-.projectHighlightItem p {
-    letter-spacing: 2px;
-    line-height: 2;
-    font-family: 'Barlow-Regular', sans-serif;
-    font-weight: bolder;
-    font-size: 2.3em;
-    text-align: left;
-    padding: 20px;
-}
-
-/**Project section Formatting**/
-/*Format Project Grid*/
-.projectGrid {
-    display: grid;
-    grid-template-columns: 1fr;/*Create a 1 column grid*/
-    gap: 50px;
-    padding: 15px;
-}
-
-/*Format Project Grid Items*/
-.projectGridItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 75%;
-    border-radius: 70px;
-    padding: 50px;
-    background-image: url(../images/blueCard.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-/*Format Project Grid Item Images*/
-.projectGridItem img {
-    width: 100%;
-    height: 400px;
-    padding: 20px;
-    margin-bottom: 50px;
-    border-radius: 15px;
-}
-
-/*Format Project Grid Item Titles*/
-.projectGridItem h3 {
-    font-family: var(--card-title-font-family);
-    font-size: var(--card-font-size);
-    color: black;
-    padding: 20px;
-    margin-bottom: 50px;
-}
-
-/*Format project grid item buttons*/
-.projectGridItem .btn-primary {
-    display: inline-block;
-    width: 60%;
-    padding: 20px;
-    font-size: 3em;
-    font-family: sans-serif;
-    border-radius: 100px;
-}
-/************End of Section Formatting************/
-
-/************Footer Formatting************/
-footer {
-    padding: 20px;
+section {
     text-align: center;
-    font-size: var(--footer-font-size);
-    font-family: var(--footer-font-family);
-    font-weight: bolder;
+    padding: 20px;
 }
-/************End of Footer Formatting************/
 
-/************Media Query Formatting************/
-
-/**Desktop Media Query Formatting**/
-@media screen and (min-width: 1300px) {
-
-    /*Format header logo*/
-    header img {
-        width: 150px;
-    }
-
-    /*Format nav bar*/
-    #hamburger {
-        display: none;
-    }
-
-    /*Format nav menu*/
-    #navMenu {
-        position: static;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-        transition: none;
-    }
-
-    /*Format nav menu items*/
-    #navMenu ul {
-        display: flex;
-        transform: none;
-        margin-left: 0;
-    }
-
-    /*Format nav menu list*/
-    #navMenu li {
-        margin: 0 50px;
-    }
-
-    /*Format nav menu links*/
-    #navMenu a {
-        font-size: 2em;
-        transition: 0.5s ease-in;/*Create button hover effect*/
-    }
-
-    /*Create button hover effect*/
-    #navMenu a:hover {
-        color: white;
-        text-decoration: underline;
-        font-size: 2.5em;
-    }
-
-    /*Get rid of overlay*/
-    #overlay {
-        display: none;
-    }
-
-    /*Format hero section*/
-    .heroSection {
-        height: 50vh;
-    }
-
-    /*Format hero content h2*/
-    .heroContent h2 {
-        font-size: 4em;
-    }
-
-    /*Format hero content a*/
-    .heroContent a {
-        font-size: 1.5em;
-        padding: 30px;
-        width: 40%;
-        transition: 0.5s ease-in;/*Create button hover effect*/
-    }
-
-    /*Create button hover effect*/
-    .heroContent a:hover {
-       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #9ce2e1;
-       color: white;
-    }
-    /*Format about section*/
-    .aboutContainer {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        padding: 50px;
-        gap: 100px;
-        margin: 80px 20px 20px 20px;
-    }
-
-    /*Format aboutcontainer img content*/
-    .aboutContainer .aboutContent img {
-        width: 30%;
-        margin-left: 20px;
-    }
-
-    /*Format about section h2*/
-    .aboutContainer .aboutContent h2 {
-        font-size: 4em;
-        margin-left: 20px;
-    }
-    /*Format about section text*/
-    .aboutContainer .aboutContent p {
-        width: 100%;
-        margin-left: 20px;
-        font-size: 1.3em;
-        text-align: left;
-    }
-
-    /*Format project highlight section to be scrollable*/
-    .projectHighlights {
-        overflow: hidden;
-        overflow-y: scroll;
-        scroll-snap-type: y mandatory;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100vh;
-
-    }
-
-    /*Hide scroll bar*/
-    .projectHighlights::-webkit-scrollbar {
-        display: none;
-    }
-
-    /*Format project highlight items*/
-    .projectHighlightItem i {
-        font-size: 3em;
-        margin-left: 20px;
-    }
-
-    /*Format project highlight text*/
-    .projectHighlightItem h3 {
-        font-size: 2em;
-    }
-
-    /*Format project highlight p tag*/
-    .projectHighlightItem p {
-        font-size: 1.5em;
-        width: 100%;
-    }
-
-    /*Format project grid*/
-    .projectGrid {
-        grid-template-columns: 1fr 1fr 1fr;/*Create a 3 column grid*/
-        gap: 50px;
-        align-items: stretch;
-        padding: 15px;
-    }
-
-    /*Format project grid items*/
-    .projectGridItem {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: 0.5s ease-in;/*Create hover outline effect*/
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    /*Format projecct grid item button*/
-    .projectGridItem .btn-primary {
-        width: 40%;
-        font-size: 1.5em;
-    }
-
-    /*Format project grid item buttons*/
-    .projectGridItem a {
-        width: 60%;
-        font-size: 2em;
-    }
-
-    /*Format project grid item h3 tags*/
-    .projectGridItem h3 {
-        font-size: 2em;
-    }
-
-    /*Format project grid item images*/
-    .projectGridItem img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+/*Format section titles*/
+section h2 {
+    font-family: var(--section-title-font);
+    font-weight: bold;
+    font-size: 1.5em;
 }
-/************End of Media Query Formatting************/
+/**Project Formatting**/
+
+/*Create box shadow*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*Format card button*/
+.card a {
+    border-radius: 50px;
+    font-size: 1.3em;
+}
+
+/************Footer formatting************/
+footer {
+    text-align: center;
+    background-color: #f9f9fb;
+    padding: 10px;
+}
+
+/*Format footer p text*/
+footer p {
+    font-family: var(--footer-font);
+    font-size: 0.8em;
+}
+/************Footer formatting************/
