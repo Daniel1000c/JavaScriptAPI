@@ -26,6 +26,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/*Format main background*/
+body {
+    background-image: url(../images/beautiful-clouds-digital-art.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*Format scrolling behavior*/
+html {
+    scroll-behavior: smooth;
+}
 /********************End of General Formatting********************/
 
 /********************Header Formatting********************/
@@ -47,18 +60,61 @@
     color: white;
 }
 
+/*Format nav bar collapse*/
+
 /*Format box menu icon*/
 .navbar-toggler {
     border: 2px solid white;
 }
-
 /********************End of Header Formatting********************/
+
+/********************Section Formatting********************/
+/**About Formatting**/
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+}
+
+/*Format about text*/
+.aboutContent {
+    text-align: center;
+    background-color: #304c89;
+    padding: 5%;
+    border-radius: 12px;
+    width: 350px;
+}
+
+.aboutContent h2 {
+    font-family: monospace;
+    font-size: 2em;
+    color: white;
+    text-align: left;
+}
+
+/*Format about content img*/
+.aboutContent img {
+    width: 40%;
+    margin: 20px 0;
+}
+
+/*Format about coontent p*/
+.aboutContent p {
+    font-family: var(--primary-title-font);
+    text-align: left;
+    line-height: 2;
+    color: white;
+    font-size: 0.9em;
+}
+
 
 /********************Footer Formatting********************/
 Footer {
     text-align: center;
     background-color: #0d6efd;
-    padding: 5%;
+    padding: 1%;
     color: white;
     font-family: var(--footer-font);
     font-size: 0.8em;
@@ -69,34 +125,8 @@ footer p {
     margin-top: 25px;
 }
 
-/*Format quick links container*/
-.quickLinks {
-    text-align: left;
+/*Format accordion*/
+.accordion {
+    background: none;
 }
-
-/*Format quick links heading*/
-.quickLinks h3 {
-    color: orange;
-    font-family: var(--footer-sub-font);
-    font-weight: bolder;
-}
-
-/*Format quick link a tags*/
-.quickLinks p a {
-    color: white;
-    font-family: var(--navigation-link-font);
-    text-decoration: none;
-    letter-spacing: 1.2px;
-}
-
-/*Format social media container*/
-.socialMedia {
-    text-align: left;
-}
-
-/*Format social media header*/
-.socialMedia h3 {
-    color: orange;
-    font-family: var(--footer-sub-font);
-    font-weight: bold;
-}
+/********************End of Footer Formatting********************/
