@@ -11,8 +11,8 @@
 
 /********************Root Formatting********************/
 :root {
-    --primary-title-font: 'M Plus Rounded 1c', sans-serif;
-    --primary-title-font-size: 1.6em;
+    --primary-font: 'M Plus Rounded 1c', sans-serif;
+    --primary-font-size: 1.6em;
     --navigation-link-font: monospace;
     --navigation-font-size: 1.4em;
     --footer-font: 'Nunito Sans', sans-serif;
@@ -48,8 +48,8 @@ html {
 /*Format nav bar brand color*/
 .navbar-brand {
     color: orange;
-    font-family: var(--primary-title-font);
-    font-size: var(--primary-title-font-size);
+    font-family: var(--primary-font);
+    font-size: var(--primary-font-size);
     font-weight: bold;
 }
 
@@ -84,7 +84,6 @@ html {
     background-color: #304c89;
     padding: 5%;
     border-radius: 12px;
-    width: 350px;
 }
 
 .aboutContent h2 {
@@ -102,9 +101,10 @@ html {
 
 /*Format about coontent p*/
 .aboutContent p {
-    font-family: var(--primary-title-font);
+    font-family: var(--primary-font);
     text-align: left;
     line-height: 2;
+    letter-spacing: 2px;
     color: white;
     font-size: 0.9em;
 }
@@ -114,7 +114,7 @@ html {
 Footer {
     text-align: center;
     background-color: #0d6efd;
-    padding: 1%;
+    padding: 10px;
     color: white;
     font-family: var(--footer-font);
     font-size: 0.8em;
@@ -127,6 +127,45 @@ footer p {
 
 /*Format accordion*/
 .accordion {
-    background: none;
+    --bs-accordion-bg: #0d6efd;
 }
+/*Format accordion button font*/
+.accordion-button {
+    font-size: 1em;
+    font-family: var(--footer-font);
+    font-weight: bold;
+    color: orange;
+    text-decoration: underline;
+}
+
+/*Delete button focus*/
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/*Delete color from button active state*/
+.accordion-button:not(.collapsed) {
+    color: orange;
+    background-color: #0d6efd;
+}
+
+/*Format accordion body list*/
+.accordion-body ul {
+    list-style-type: none;
+    text-align: left;
+    line-height: 2;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 0.9em;
+}
+
+/*Format list items*/
+.accordion-body li a {
+    font-family: var(--footer-sub-font);
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
 /********************End of Footer Formatting********************/
