@@ -7,6 +7,9 @@
 
 /*Merriweather*/
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Varela Round*/
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 /************End of Font Formatting************/
 
 /************General Formatting************/
@@ -65,6 +68,7 @@ html {
     --navigation-font: 'Roboto', sans-serif;
     --footer-font: 'Roboto Slab', sans-serif;
     --section-title-font: 'Merriweather', sans-serif;
+    --section-subtitle-font: 'Varela Round', sans-serif;
 }
 /************Header formatting************/
 
@@ -189,6 +193,72 @@ section h2 {
     font-size: 1.3em;
 }
 
+/**About Formatting**/
+
+/*Format about content*/
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: center;
+}
+
+/*Format about content img*/
+.aboutContent img {
+    width: 60%;
+}
+
+/*Format about content header tag*/
+.aboutContent h4 {
+    font-family: var(--section-subtitle-font);
+    font-size: 1.5em;
+    text-decoration: underline;
+    text-align: left;
+}
+
+/*Format about content p tag*/
+.aboutContent p {
+    text-align: left;
+    line-height: 2;
+    letter-spacing: 2px;
+    font-family: var(--section-subtitle-font);
+}
+
+/*Format highlight item*/
+.highlightItem {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/*Format highlight item icon*/
+.highlightItem i {
+    font-size: 4em;
+    background-color: #BDFFFD;
+    padding: 15px;
+    margin-bottom: 25px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+/*Format highlight h4 tag*/
+.highlightItem h4 {
+    font-family: var(--section-subtitle-font);
+    font-size: 1.5em;
+    text-decoration: underline;
+    text-align: left;
+}
+
+/*Format highlight item p tag*/
+.highlightItem p {
+    text-align: left;
+    line-height: 2;
+    letter-spacing: 2px;
+    font-family: var(--section-subtitle-font);
+}
+
 /************Footer formatting************/
 footer {
     text-align: center;
@@ -202,3 +272,93 @@ footer p {
     font-size: 0.8em;
 }
 /************Footer formatting************/
+
+/************Media Queries************/
+
+/*Desktop Media Query*/
+@media screen and (min-width: 1300px) {
+
+    /*Section Formatting/
+
+    /*Format section titles*/
+    section h2 {
+        font-size: 3em;
+    }
+
+    /*Hero Section Formatting*/
+    .heroSection {
+        height: 50vh;
+    }
+
+    /*Format hero content h2*/
+    .heroContent h2 {
+        font-size: 3em;
+    }
+
+    /*Format hero content a*/
+    .heroContent a {
+        font-size: 1.5em;
+        padding: 15px 30px;
+    }
+
+    /*About Formatting*/
+
+    /*Format contentContainer to row*/
+    .contentContainer {
+       display: flex;
+       justify-content: center;
+       align-items: flex-start;
+       flex-direction: row-reverse;
+       gap: 100px;
+    }
+
+    /*Format about content*/
+    .aboutContent {
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        justify-content: left;
+        position: sticky;
+        top: 0;
+        margin: 20px;
+    }
+
+    /*Format about content img*/
+    .aboutContent img {
+        width: 50%;
+    }
+
+    /*Format about content header tag*/
+    .aboutContent h4 {
+        font-family: var(--section-subtitle-font);
+        font-size: 3em;
+        text-decoration: underline;
+        text-align: left;
+    }
+
+    /*Format about content p tag*/
+    .aboutContent p {
+        text-align: left;
+        line-height: 2;
+        letter-spacing: 2px;
+        font-family: var(--section-subtitle-font);
+        font-size: 2em;
+        width: 800px
+    }
+
+    /*Format highlight container*/
+    .highlightContainer {
+        margin: 20px;
+    }
+
+    /*Format h4 title*/
+    .highlightItem h4 {
+        font-size: 3em;
+    }
+
+    /*Format p tag*/
+    .highlightItem p {
+        font-size: 1.3em;
+        width: 800px;
+    }
+}
