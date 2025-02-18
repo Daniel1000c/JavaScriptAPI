@@ -149,6 +149,26 @@ html {
     margin: 20px 0;
 }
 
+/*Format weatherResult h3 title*/
+.weatherResult h3 {
+    font-family: var(--primary-font);
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+/*Format weather result p tag*/
+.weatherResult p {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    color: white;
+    letter-spacing: 2px;
+    text-align: left;
+    margin-top: 25px;
+}
+
 /**About Formatting**/
 .aboutContainer {
     display: flex;
