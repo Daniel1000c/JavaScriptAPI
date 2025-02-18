@@ -21,8 +21,12 @@ $(document).ready(function () {
                     let imgPath = "images/error.png";
 
                     switch(true) {
+                        case desc.includes("clear") :
                         case desc.includes("sunny") :
                             imgPath = "images/sunny.png";
+                            break;
+                        case desc.includes("overcast") :
+                            imgPath = "images/overcast.png";
                             break;
                         case desc.includes("cloudy") :
                             imgPath = "images/cloudy.png";
@@ -46,9 +50,9 @@ $(document).ready(function () {
 
                     //Update weather Container
                     $("#cityName").text(city);
-                    $("#temp").text(`Temperature: ${temp} °C`); //Temperature
-                    $("#desc").text(`Description: ${desc}`); //Description
-                    $("#hum").text(`Humidity: ${humidity} %`); //Humidity
+                    $("#temp").text(`Temp: ${temp} °C`); //Temperature
+                    $("#desc").text(`Desc: ${desc}`); //Description
+                    $("#hum").text(`Hum: ${humidity} %`); //Humidity
 
                     //Link weather icon
                     $("#weatherIcon").attr("src", imgPath);
