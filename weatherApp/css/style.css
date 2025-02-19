@@ -274,7 +274,90 @@ footer p {
 /********************End of Footer Formatting********************/
 
 /********************Media Query Formatting********************/
-@media screen and (min-width: 1300px) {
+
+/*Tablet Formatting*/
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+    /*Format nav bar font*/
+    .navbar-brand {
+        font-size: 3em;
+    }
+
+    /*Format box icon*/
+    .navbar-toggler {
+        font-size: 2em;
+    }
+
+    /*Format nav links*/
+    .nav-link {
+        font-size: 2em;
+    }
+
+    /*Format weather Container*/
+
+    /*Format weather box width*/
+    .weatherContent {
+        width: 80%;
+    }
+
+    /*Format search input*/
+    .weatherBox input {
+        width: 400px;
+        font-size: 2em;
+    }
+
+    /*Format search button*/
+    .weatherBox button {
+        width: 65px;
+        height: 60px;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    /*Format about container*/
+
+    /*Format about content width*/
+    .aboutContent {
+        width: 90%;
+    }
+
+    /*Format weather title*/
+    .aboutContent h2 {
+        font-size: 3em;
+    }
+
+    /*Format about content img*/
+    .aboutContent img {
+        width: 40%;
+    }
+
+    /*Format about content p*/
+    .aboutContent p {
+        font-size: 2em;
+    }
+
+    /*Format footer*/
+
+    /*Format footer links*/
+    .accordion-button {
+        font-size: 2em;
+    }
+
+    /*Format accordion links*/
+    .accordion-body ul {
+        font-size: 1.5em;
+    }
+
+    /*Format footer p tag*/
+    footer p {
+        font-size: 2em;
+    }
+
+
+}
+
+/*Desktop Formatting*/
+@media screen and (min-width: 1200px) {
 
     /*Format weather container*/
     
