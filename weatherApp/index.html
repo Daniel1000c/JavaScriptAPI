@@ -46,12 +46,12 @@
                   <h2>Weather</h2>
 
                   <div class="weatherBox">
-                      <input type="text" id="inputBox" placeholder="Enter city name">
-                      <button id="searchBtn"><i class='bx bx-search' ></i></button>  
+                      <input type="text" id="inputBox" placeholder="Enter city name" aria-label="Enter city name">
+                      <button id="searchBtn" aria-label="Search for Weather"><i class='bx bx-search' ></i></button>  
                   </div>
 
                   <!--Create weather result container-->
-                  <div class="weatherResult">
+                  <div class="weatherResult" role="region">
                     <img src="images/error.png" alt="Weather Status" id="weatherIcon">
                     <h3 id="cityName" aria-live="polite">Loading...</h3>
                     <p id="temp"></p>
@@ -62,9 +62,9 @@
           </section>
 
           <!--Create about section-->
-          <section class="aboutContainer" id="about">
+          <section class="aboutContainer" id="about" aria-labelledby="aboutTitle">
               <div class="aboutContent">
-                  <h2>Weather App</h2>
+                  <h2 id="aboutTitle">Weather App</h2>
 
                   <img src="images/cartoonSunNoBg.png" alt="Weather App">
 
